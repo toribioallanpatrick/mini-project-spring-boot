@@ -3,7 +3,7 @@ package com.example.login.registration;
 import com.example.login.appuser.AppUser;
 import com.example.login.appuser.AppUserRole;
 import com.example.login.appuser.AppUserService;
-import com.example.login.email.EmailSender;
+
 import com.example.login.registration.token.ConfirmationToken;
 import com.example.login.registration.token.ConfirmationTokenService;
 import lombok.AllArgsConstructor;
@@ -19,7 +19,7 @@ public class RegistrationService {
     private final AppUserService appUserService;
     private final EmailValidator emailValidator;
     private final ConfirmationTokenService confirmationTokenService;
-    private final EmailSender emailSender;
+
 
     public String register(RegistrationRequest request) {
         boolean isValidEmail = emailValidator.
@@ -41,9 +41,7 @@ public class RegistrationService {
         );
 
         String link = "http://localhost:8080/api/v1/registration/confirm?token=" + token;
-        emailSender.send(
-                request.getEmail(),
-                buildEmail(request.getFirstName(), link));
+
 
         return token;
     }
