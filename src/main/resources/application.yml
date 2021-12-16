@@ -5,9 +5,9 @@ server:
 
 spring:
   datasource:
-    password: 44e0c056ba96f3549790345745714626311aa01374d6f4b8253a58d2f75a028e
-    url: jdbc:postgresql://ec2-34-193-235-32.compute-1.amazonaws.com:5432/dba8f0f7ognaj5
-    username: fzlxdcytvftjoe
+    password: e7b97cbfe8a7c934ad1b71d1707690bf01e3bfaf7046b037b371475165742953
+    url: jdbc:postgresql://ec2-34-232-191-133.compute-1.amazonaws.com:5432/dcj63uk48n0e3c
+    username: sxwwtocehpcjse
   jpa:
     hibernate:
       ddl-auto: update
