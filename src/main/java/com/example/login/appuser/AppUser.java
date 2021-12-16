@@ -38,7 +38,7 @@ public class AppUser implements UserDetails {
     @Enumerated(EnumType.STRING)
     private AppUserRole appUserRole;
     private Boolean locked = false;
-    private Boolean enabled = false;
+    private Boolean enabled = true;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "appUser")
     private List<Item> items;
